@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#090b14">
+  <meta name="description" content="Portofolio pribadi Muhammad Raka Prasetya, pelajar Rekayasa Perangkat Lunak yang tertarik pada web development dan teknologi.">
+  <title>Muhammad Raka Prasetya — Portfolio</title>
+  <style>
+    :root{--bg:#080a12;--panel:#101321;--panel2:#14172a;--line:#282c48;--text:#f1f1ff;--muted:#a9aecb;--purple:#a78bfa;--purple2:#7c3aed;--cyan:#7dd3fc;--max:1120px}
+    *{box-sizing:border-box;scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(ellipse at 85% 0%,#21143e 0,transparent 35%),var(--bg);color:var(--text);font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;line-height:1.65}
+    a{color:inherit;text-decoration:none} .wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+    header{position:sticky;top:0;z-index:10;background:#090b14eF;border-bottom:1px solid #292744;backdrop-filter:blur(16px)}
+    nav{height:72px;display:flex;align-items:center;justify-content:space-between;gap:22px}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.2px}.brand-mark{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:linear-gradient(135deg,var(--purple),#6d28d9);color:#090b14;font-weight:950;font-size:19px}
+    .navlinks{display:flex;gap:23px;align-items:center;font-size:13px;color:var(--muted)}.navlinks a:hover,.navlinks a.active{color:var(--purple)}
+    .menu{display:none;background:transparent;border:1px solid var(--line);color:var(--text);padding:8px 12px;border-radius:10px}
+    .hero{min-height:560px;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:42px;padding-top:65px;padding-bottom:70px}
+    .eyebrow{font-size:12px;letter-spacing:2.4px;text-transform:uppercase;color:var(--purple);font-weight:800}
+    h1{font-size:clamp(42px,6vw,72px);line-height:1.04;letter-spacing:-2.5px;margin:14px 0 18px}
+    .gradient{background:linear-gradient(100deg,#c4b5fd,#8b5cf6 55%,#7dd3fc);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .roles{color:#d7d8f5;font-weight:600;margin-bottom:20px}.roles span{color:var(--purple);padding:0 8px}
+    .intro{max-width:580px;color:var(--muted);font-size:16px}
+    .actions{display:flex;gap:12px;flex-wrap:wrap;margin:26px 0}.btn{display:inline-flex;align-items:center;gap:9px;padding:12px 18px;border-radius:12px;border:1px solid var(--line);font-weight:700;font-size:14px;transition:.2s}
+    .btn.primary{background:linear-gradient(120deg,#a78bfa,#7c3aed);border-color:transparent;color:#0a0b13}.btn:hover{transform:translateY(-2px);border-color:var(--purple)}
+    .quicklinks{display:flex;gap:22px;flex-wrap:wrap;color:#c6c9e7;font-size:13px}.quicklinks a:hover{color:var(--purple)}
+    .hero-art{position:relative;min-height:360px;display:grid;place-items:center}
+    .orbit{position:absolute;width:320px;height:320px;border:1px solid #5b4a91;border-radius:50%;box-shadow:0 0 90px #7c3aed20,inset 0 0 50px #7c3aed12}
+    .code-window{position:relative;width:min(100%,420px);background:#101321eF;border:1px solid #514477;border-radius:18px;overflow:hidden;box-shadow:0 24px 80px #0009;transform:rotate(2deg)}
+    .windowbar{display:flex;align-items:center;gap:7px;padding:13px 16px;border-bottom:1px solid var(--line);color:var(--muted);font-size:12px}.dot{width:8px;height:8px;border-radius:50%;background:#f87171}.dot:nth-child(2){background:#fbbf24}.dot:nth-child(3){background:#4ade80}
+    pre{margin:0;padding:25px 23px 28px;white-space:pre-wrap;overflow-wrap:anywhere;font:13px/1.9 ui-monospace,SFMono-Regular,Menlo,monospace;color:#cbd5e1}
+    .c-purple{color:#c4b5fd}.c-cyan{color:#7dd3fc}.c-green{color:#86efac}.float-tag{position:absolute;background:#15152a;border:1px solid #514477;color:#d9d1ff;padding:10px 14px;border-radius:12px;font-size:12px;box-shadow:0 12px 40px #0008}.tag-one{top:18px;right:0}.tag-two{bottom:15px;left:0}
+    section{padding:76px 0;border-top:1px solid #20233a}.section-head{margin-bottom:30px}.section-head h2{font-size:clamp(28px,4vw,38px);letter-spacing:-1px;line-height:1.2;margin:8px 0}.section-head p{color:var(--muted);margin:10px 0 0}
+    .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:35px;align-items:center}.about-copy{color:var(--muted)}.about-copy p{margin-top:0}.quote{border-left:3px solid var(--purple);padding:8px 0 8px 18px;color:#d9ccff;font-style:italic;margin-top:24px}
+    .info-card,.skill-card,.project-card,.edu-card,.contact-card{background:linear-gradient(145deg,#121525,#0d101b);border:1px solid var(--line);border-radius:16px}
+    .info-card{padding:18px 22px}.info-row{display:grid;grid-template-columns:130px 1fr;gap:14px;padding:13px 0;border-bottom:1px solid #25283d;font-size:14px}.info-row:last-child{border:0}.info-row span:first-child{color:var(--muted)}.info-row span:last-child{overflow-wrap:anywhere}
+    .skills{display:grid;grid-template-columns:repeat(3,1fr);gap:15px}.skill-card{padding:22px;transition:.2s}.skill-card:hover,.project-card:hover{transform:translateY(-4px);border-color:#6d5aa3}.skill-icon{width:44px;height:44px;border-radius:12px;display:grid;place-items:center;background:#8b5cf61a;color:var(--purple);font-size:22px;margin-bottom:15px}.skill-card h3,.project-card h3{margin:0 0 6px;font-size:17px}.skill-card p,.project-card p{margin:0;color:var(--muted);font-size:13px}
+    .projects{display:grid;grid-template-columns:repeat(2,1fr);gap:18px}.project-card{padding:23px;transition:.2s}.project-top{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:15px}.project-symbol{font-size:25px;color:var(--purple)}.pill{font-size:11px;padding:5px 9px;border:1px solid #39345b;border-radius:99px;color:#c4b5fd}.tags{display:flex;gap:7px;flex-wrap:wrap;margin-top:17px}.tags span{font-size:11px;color:#c4c8e8;background:#20233a;padding:4px 9px;border-radius:7px}
+    .education{display:grid;grid-template-columns:1fr .8fr;gap:20px;align-items:stretch}.edu-card{padding:24px;display:flex;gap:18px;align-items:flex-start}.edu-icon{font-size:24px;color:var(--purple);background:#8b5cf61a;border-radius:12px;padding:12px}.edu-card h3{margin:0 0 5px;font-size:17px}.edu-card p{margin:0;color:var(--muted);font-size:14px}.note-card{padding:26px;border:1px solid #45366e;border-radius:16px;background:linear-gradient(135deg,#21173b,#111322);display:flex;flex-direction:column;justify-content:center}.note-card strong{font-size:24px;line-height:1.3;color:#d6c9ff}.note-card span{color:var(--muted);font-size:13px;margin-top:12px}
+    .contact-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:30px;align-items:center}.contact-layout>div>p{color:var(--muted)}.contact-list{display:grid;grid-template-columns:1fr 1fr;gap:12px}.contact-card{padding:18px;display:flex;align-items:center;gap:13px;min-width:0}.contact-icon{font-size:22px;color:var(--purple)}.contact-card small{display:block;color:var(--muted);font-size:11px}.contact-card strong{font-size:13px;overflow-wrap:anywhere}
+    footer{border-top:1px solid #20233a;padding:25px 0;color:var(--muted);font-size:12px}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:12px}.footer-brand{color:var(--purple);font-size:18px;font-weight:900}
+    @media(max-width:800px){.navlinks{display:none;position:absolute;top:71px;left:0;right:0;padding:20px;background:#090b14;border-bottom:1px solid var(--line);flex-direction:column;align-items:flex-start}.navlinks.open{display:flex}.menu{display:block}.hero{grid-template-columns:1fr;gap:20px;padding-top:55px}.hero-art{min-height:330px}.about-grid,.education,.contact-layout{grid-template-columns:1fr}.skills{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:520px){.wrap{width:min(100% - 28px,var(--max))}.hero{min-height:0}.hero-art{min-height:285px}.orbit{width:245px;height:245px}.code-window{width:95%}pre{font-size:11px;padding:18px}.float-tag{font-size:10px}.skills,.projects,.contact-list{grid-template-columns:1fr}.info-row{grid-template-columns:105px 1fr}.section-head h2{font-size:29px}section{padding:58px 0}.footer-inner{align-items:flex-start;flex-direction:column}}
+  </style>
+</head>
+<body>
+<header>
+  <nav class="wrap">
+    <a class="brand" href="#beranda" aria-label="Raka Prasetya, beranda"><span class="brand-mark">RP</span><span>Raka Prasetya</span></a>
+    <div class="navlinks" id="navlinks">
+      <a class="active" href="#beranda">Beranda</a><a href="#tentang">Tentang</a><a href="#keahlian">Keahlian</a><a href="#proyek">Proyek</a><a href="#pendidikan">Pendidikan</a><a href="#kontak">Kontak</a>
+    </div>
+    <button class="menu" id="menu" aria-expanded="false" aria-controls="navlinks">Menu ☰</button>
+  </nav>
+</header>
+<main>
+  <section class="hero wrap" id="beranda" style="border-top:0">
+    <div>
+      <div class="eyebrow">Portofolio pribadi</div>
+      <h1>Halo, saya<br><span class="gradient">Muhammad Raka Prasetya</span></h1>
+      <div class="roles">Web Developer <span>◆</span> IT Enthusiast <span>◆</span> Pelajar</div>
+      <p class="intro">Pelajar SMK Negeri 64 Jakarta jurusan Rekayasa Perangkat Lunak (RPL) yang tertarik pada pengembangan web, pengelolaan database, dan teknologi informasi.</p>
+      <div class="actions"><a class="btn primary" href="#proyek">⌘ &nbsp; Lihat Proyek</a><a class="btn" href="#kontak">✉ &nbsp; Hubungi Saya</a></div>
+      <div class="quicklinks"><a href="mailto:prasetyaraka789@gmail.com">✉ &nbsp; prasetyaraka789@gmail.com</a><a href="https://github.com/raka616" target="_blank" rel="noopener">◉ &nbsp; github.com/raka616</a></div>
+    </div>
+    <div class="hero-art" aria-label="Ilustrasi kode bergaya terminal">
+      <div class="orbit"></div>
+      <div class="code-window">
+        <div class="windowbar"><i class="dot"></i><i class="dot"></i><i class="dot"></i><span style="margin-left:8px">raka-portfolio / about.js</span></div>
+        <pre><span class="c-purple">const</span> developer = {
+  name: <span class="c-green">"Muhammad Raka Prasetya"</span>,
+  school: <span class="c-green">"SMK Negeri 64 Jakarta"</span>,
+  major: <span class="c-green">"Rekayasa Perangkat Lunak"</span>,
+  skills: [
+    <span class="c-cyan">"Laravel"</span>, <span class="c-cyan">"PHP"</span>,
+    <span class="c-cyan">"HTML"</span>, <span class="c-cyan">"CSS"</span>,
+    <span class="c-cyan">"JavaScript"</span>, <span class="c-cyan">"MySQL"</span>
+  ],
+  mindset: <span class="c-green">"Keep learning."</span>
+};</pre>
+      </div>
+      <div class="float-tag tag-one">✦ Belajar & berkembang</div><div class="float-tag tag-two">{"kode": "kreativitas"}</div>
+    </div>
+  </section>
+
+  <section id="tentang"><div class="wrap">
+    <div class="about-grid">
+      <div><div class="eyebrow">01 — Tentang saya</div><div class="section-head"><h2>Mengenal Saya</h2></div>
+        <div class="about-copy"><p>Saya adalah pelajar SMK Negeri 64 Jakarta jurusan Rekayasa Perangkat Lunak (RPL). Saya memiliki ketertarikan pada bidang pengembangan web, khususnya membangun aplikasi menggunakan Laravel, PHP, dan MySQL.</p><p>Saya senang mempelajari hal baru, mengembangkan kemampuan secara mandiri, dan mencoba menerapkan pengetahuan melalui proyek. Saya juga memiliki minat pada seni menggambar karakter dan kaligrafi.</p></div>
+        <div class="quote">“Terus belajar, terus berkembang, dan berusaha menjadi versi terbaik dari diri sendiri.”</div>
+      </div>
+      <div class="info-card">
+        <div class="info-row"><span>Nama</span><span>Muhammad Raka Prasetya</span></div>
+        <div class="info-row"><span>Sekolah</span><span>SMK Negeri 64 Jakarta</span></div>
+        <div class="info-row"><span>Jurusan</span><span>Rekayasa Perangkat Lunak (RPL)</span></div>
+        <div class="info-row"><span>Fokus</span><span>Web development & teknologi</span></div>
+        <div class="info-row"><span>Email</span><span>prasetyaraka789@gmail.com</span></div>
+        <div class="info-row"><span>GitHub</span><span><a href="https://github.com/raka616" target="_blank" rel="noopener">github.com/raka616 ↗</a></span></div>
+      </div>
+    </div>
+  </div></section>
+
+  <section id="keahlian"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">02 — Keahlian</div><h2>Keahlian & Teknologi</h2><p>Teknologi yang saya gunakan dan pelajari.</p></div>
+    <div class="skills">
+      <article class="skill-card"><div class="skill-icon">⌘</div><h3>Laravel</h3><p>Framework PHP untuk membangun aplikasi web dengan struktur yang terorganisir.</p></article>
+      <article class="skill-card"><div class="skill-icon">₱</div><h3>PHP</h3><p>Bahasa pemrograman untuk pengembangan web sisi server.</p></article>
+      <article class="skill-card"><div class="skill-icon">〈〉</div><h3>HTML</h3><p>Menyusun struktur dan konten halaman web.</p></article>
+      <article class="skill-card"><div class="skill-icon">✳</div><h3>CSS</h3><p>Mengatur tata letak, tampilan, dan responsivitas website.</p></article>
+      <article class="skill-card"><div class="skill-icon">JS</div><h3>JavaScript</h3><p>Menambahkan interaksi dan perilaku dinamis pada halaman web.</p></article>
+      <article class="skill-card"><div class="skill-icon">▤</div><h3>MySQL</h3><p>Mengelola database dan data yang digunakan aplikasi.</p></article>
+    </div>
+  </div></section>
+
+  <section id="proyek"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">03 — Proyek</div><h2>Proyek yang Pernah Dikerjakan</h2><p>Beberapa proyek latihan dan pengembangan kemampuan. Detail serta tautan dapat ditambahkan setelah disiapkan.</p></div>
+    <div class="projects">
+      <article class="project-card"><div class="project-top"><span class="project-symbol">▤</span><span class="pill">Web App</span></div><h3>Portal Berita</h3><p>Website berita menggunakan Laravel dan MySQL untuk mengelola dan menampilkan konten berita.</p><div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div><p style="margin-top:14px">Tautan proyek: <a href="https://github.com/raka616?tab=repositories" target="_blank" rel="noopener">Lihat repositori GitHub ↗</a></p></article>
+      <article class="project-card"><div class="project-top"><span class="project-symbol">◇</span><span class="pill">Web App</span></div><h3>E-Commerce</h3><p>Aplikasi toko dengan fitur CRUD dan autentikasi pengguna.</p><div class="tags"><span>Laravel</span><span>PHP</span><span>MySQL</span></div><p style="margin-top:14px">Tautan proyek: <a href="https://github.com/raka616?tab=repositories" target="_blank" rel="noopener">Lihat repositori GitHub ↗</a></p></article>
+      <article class="project-card"><div class="project-top"><span class="project-symbol">▣</span><span class="pill">Responsive</span></div><h3>Website Profil</h3><p>Website profil dengan tampilan responsif untuk berbagai ukuran layar.</p><div class="tags"><span>HTML</span><span>CSS</span><span>JavaScript</span></div><p style="margin-top:14px">Tautan proyek: <a href="https://github.com/raka616?tab=repositories" target="_blank" rel="noopener">Lihat repositori GitHub ↗</a></p></article>
+      <article class="project-card"><div class="project-top"><span class="project-symbol">▱</span><span class="pill">Mobile</span></div><h3>Aplikasi Mobile Sederhana</h3><p>Proyek aplikasi mobile sederhana sebagai sarana belajar dan mengenal pengembangan aplikasi.</p><div class="tags"><span>[Framework]</span><span>[Bahasa]</span></div><p style="margin-top:14px">Tautan proyek: <a href="https://github.com/raka616?tab=repositories" target="_blank" rel="noopener">Lihat repositori GitHub ↗</a></p></article>
+    </div>
+  </div></section>
+
+  <section id="pendidikan"><div class="wrap">
+    <div class="section-head"><div class="eyebrow">04 — Pendidikan</div><h2>Riwayat Pendidikan</h2></div>
+    <div class="education">
+      <div class="edu-card"><div class="edu-icon">⌂</div><div><h3>SMK Negeri 64 Jakarta</h3><p>Jurusan Rekayasa Perangkat Lunak (RPL)</p><p style="margin-top:9px">Tahun pendidikan: <strong>2024–2027</strong></p></div></div>
+      <div class="note-card"><strong>“Ilmu hari ini,<br>untuk karya esok hari.”</strong><span>Terus mengembangkan keterampilan, satu proyek dalam satu waktu.</span></div>
+    </div>
+  </div></section>
+
+  <section id="kontak"><div class="wrap">
+    <div class="contact-layout"><div><div class="eyebrow">05 — Kontak</div><div class="section-head"><h2>Mari Terhubung</h2></div><p>Terima kasih sudah mengunjungi portofolio saya. Hubungi saya melalui informasi di samping atau kunjungi GitHub untuk melihat proyek dan perkembangan belajar saya.</p></div>
+      <div class="contact-list">
+        <a class="contact-card" href="mailto:prasetyaraka789@gmail.com"><span class="contact-icon">✉</span><span><small>Email</small><strong>prasetyaraka789@gmail.com</strong></span></a>
+        <a class="contact-card" href="https://github.com/raka616" target="_blank" rel="noopener"><span class="contact-icon">◉</span><span><small>GitHub</small><strong>github.com/raka616</strong></span></a>
+      </div>
+    </div>
+  </div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><span class="footer-brand">RP</span> &nbsp; Muhammad Raka Prasetya</div><span>© <span id="year"></span> • Dibuat dengan semangat belajar.</span></div></footer>
+<script>
+  const menu = document.getElementById('menu');
+  const links = document.getElementById('navlinks');
+  menu.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    menu.setAttribute('aria-expanded', String(open));
+  });
+  links.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    links.classList.remove('open'); menu.setAttribute('aria-expanded', 'false');
+  }));
+  document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
